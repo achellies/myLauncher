@@ -20,7 +20,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MyLauncherView.h"
-#import "MyLauncherItem.h"
+#import "MyLauncherViewControllerItem.h"
 
 @interface MyLauncherViewController : UIViewController <MyLauncherViewDelegate, UINavigationControllerDelegate> {
 }
@@ -32,7 +32,7 @@
 -(BOOL)hasSavedLauncherItems;
 -(void)clearSavedLauncherItems;
 
--(void)launcherViewItemSelected:(MyLauncherItem*)item;
+-(void)launcherViewItemSelected:(MyLauncherView*)item;
 -(void)closeView;
 
 @end

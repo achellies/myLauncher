@@ -20,6 +20,7 @@
 
 #import "MyLauncherView.h"
 
+
 struct NItemLocation {
 	NSInteger page; 
 	NSInteger sindex; 
@@ -435,7 +436,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 	{
 		if (!self.draggingItem && [self itemMovable:item])
 		{
-			self.draggingItem = (MyLauncherItem*)item; 
+			self.draggingItem = (MyLauncherItem*)item;
 			[self.draggingItem setDragging:YES];
 			[self.pagesScrollView addSubview:self.draggingItem];
 			dragging = YES;			
@@ -677,7 +678,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		}
 		else 
 		{
-			for (MyLauncherItem* item in itemPage) 
+			for (MyLauncherItem* item in itemPage)
 				item.transform = CGAffineTransformIdentity;
 		}
 	}
@@ -706,7 +707,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		NSInteger animatingItems = 0;
 		for (NSArray* itemPage in self.pages) 
 		{
-			for (MyLauncherItem* item in itemPage) 
+			for (MyLauncherItem* item in itemPage)
 			{
 				item.closeButton.hidden = !editing;
 				if (item != self.draggingItem && [self itemMovable:item]) 
@@ -798,15 +799,7 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		
 		for(MyLauncherItem *item in page)
 		{
-			NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
-			[itemToSave setObject:item.title forKey:@"title"];
-			[itemToSave setObject:item.image forKey:@"image"];
-            [itemToSave setObject:item.iPadImage forKey:@"iPadImage"];
-			[itemToSave setObject:[NSString stringWithFormat:@"%d", [item deletable]] forKey:@"deletable"];
-			[itemToSave setObject:item.controllerStr forKey:@"controller"];
-            [itemToSave setObject:item.controllerTitle forKey:@"controllerTitle"];
-            [itemToSave setObject:[NSNumber numberWithInt:2] forKey:@"myLauncherViewItemVersion"];
-			
+            NSDictionary *itemToSave = [item itemToSave];
 			[pageToSave addObject:itemToSave];
 		}
 		[pagesToSave addObject:pageToSave];

@@ -19,7 +19,7 @@
 //
 
 #import "RootViewController.h"
-#import "MyLauncherItem.h"
+#import "MyLauncherViewControllerItem.h"
 #import "CustomBadge.h"
 #import "ItemViewController.h"
 
@@ -41,43 +41,43 @@
 	{
 		[self.launcherView setPages:[NSMutableArray arrayWithObjects: 
                                      [NSMutableArray arrayWithObjects: 
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 1"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 1"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 1 View"
                                                                    deletable:NO],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 2"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 2"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 2 View" 
                                                                    deletable:NO],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 3"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 3"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 3 View"
                                                                    deletable:YES],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 4"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 4"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 4 View"
                                                                    deletable:NO],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 5"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 5"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 5 View"
                                                                    deletable:YES],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 6"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 6"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 6 View"
                                                                    deletable:NO],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 7"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 7"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
@@ -85,19 +85,19 @@
                                                                    deletable:NO],
                                       nil], 
                                      [NSMutableArray arrayWithObjects: 
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 8"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 8"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 8 View"
                                                                    deletable:NO],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 9"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 9"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 9 View"
                                                                    deletable:YES],
-                                      [[MyLauncherItem alloc] initWithTitle:@"Item 10"
+                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 10"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
@@ -116,11 +116,11 @@
 	}
     
     // Set badge text for a MyLauncherItem using it's setBadgeText: method
-    [(MyLauncherItem *)[[[self.launcherView pages] objectAtIndex:0] objectAtIndex:0] setBadgeText:@"4"];
+    [(MyLauncherViewControllerItem *)[[[self.launcherView pages] objectAtIndex:0] objectAtIndex:0] setBadgeText:@"4"];
     
     // Alternatively, you can import CustomBadge.h as above and setCustomBadge: as below.
     // This will allow you to change colors, set scale, and remove the shine and/or frame.
-    [(MyLauncherItem *)[[[self.launcherView pages] objectAtIndex:0] objectAtIndex:1] setCustomBadge:[CustomBadge customBadgeWithString:@"2" withStringColor:[UIColor blackColor] withInsetColor:[UIColor whiteColor] withBadgeFrame:YES withBadgeFrameColor:[UIColor blackColor] withScale:0.8 withShining:NO]];
+    [(MyLauncherViewControllerItem *)[[[self.launcherView pages] objectAtIndex:0] objectAtIndex:1] setCustomBadge:[CustomBadge customBadgeWithString:@"2" withStringColor:[UIColor blackColor] withInsetColor:[UIColor whiteColor] withBadgeFrame:YES withBadgeFrameColor:[UIColor blackColor] withScale:0.8 withShining:NO]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation

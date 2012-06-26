@@ -119,7 +119,7 @@
     return ([self retrieveFromUserDefaults:@"myLauncherView"] != nil);
 }
 
--(void)launcherViewItemSelected:(MyLauncherItem*)item {
+-(void)launcherViewItemSelected:(MyLauncherViewControllerItem*)item {
     if (![self appControllers] || [self launcherNavigationController]) {
         return;
     }
@@ -250,7 +250,7 @@
                 NSNumber *version;
                 if ((version = [item objectForKey:@"myLauncherViewItemVersion"])) {
                     if ([version intValue] == 2) {
-                        [savedPage addObject:[[MyLauncherItem alloc]
+                        [savedPage addObject:[[MyLauncherViewControllerItem alloc]
                                                initWithTitle:[item objectForKey:@"title"]
                                                iPhoneImage:[item objectForKey:@"image"]
                                                iPadImage:[item objectForKey:@"iPadImage"]
@@ -259,7 +259,7 @@
                                                deletable:[[item objectForKey:@"deletable"] boolValue]]];
                     }
                 } else {
-                    [savedPage addObject:[[MyLauncherItem alloc]
+                    [savedPage addObject:[[MyLauncherViewControllerItem alloc]
                                            initWithTitle:[item objectForKey:@"title"]
                                            image:[item objectForKey:@"image"]
                                            target:[item objectForKey:@"controller"]

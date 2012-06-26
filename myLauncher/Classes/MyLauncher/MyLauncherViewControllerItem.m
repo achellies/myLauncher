@@ -1,9 +1,10 @@
 //
-//  MyLauncherItem.m
+//  MyLauncherViewControllerItem.m
 //  @rigoneri
 //
 //  Copyright 2010 Rodrigo Neri
 //  Copyright 2011 David Jarrett
+//  Copyright 2012 Nicolas Desjardins
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -18,19 +19,18 @@
 //  limitations under the License.
 //
 
-#import "MyLauncherItem.h"
+#import "MyLauncherViewControllerItem.h"
 #import "CustomBadge.h"
 
-@implementation MyLauncherItem
+@implementation MyLauncherViewControllerItem
 
-@synthesize delegate = _delegate;
+
 @synthesize title = _title;
 @synthesize image = _image;
 @synthesize iPadImage = _iPadImage;
-@synthesize closeButton = _closeButton;
 @synthesize controllerStr = _controllerStr;
 @synthesize controllerTitle = _controllerTitle;
-@synthesize badge = _badge;
+
 
 #pragma mark - Lifecycle
 
@@ -62,6 +62,18 @@
 	return self;
 }
 
+-(NSDictionary*)itemToSave {
+    NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
+    [itemToSave setObject:_title forKey:@"title"];
+    [itemToSave setObject:_image forKey:@"image"];
+    [itemToSave setObject:_iPadImage forKey:@"iPadImage"];
+    [itemToSave setObject:[NSString stringWithFormat:@"%d", deletable] forKey:@"deletable"];
+    [itemToSave setObject:_controllerStr forKey:@"controller"];
+    [itemToSave setObject:_controllerTitle forKey:@"controllerTitle"];
+    [itemToSave setObject:[NSNumber numberWithInt:2] forKey:@"myLauncherViewItemVersion"];
+    
+    return itemToSave;
+}
 #pragma mark - Layout
 
 -(void)layoutItem
@@ -123,105 +135,6 @@
 
 #pragma mark - Touch
 
--(void)closeItem:(id)sender
-{
-	[UIView animateWithDuration:0.1 
-						  delay:0 
-						options:UIViewAnimationOptionCurveEaseIn 
-					 animations:^{	
-						 self.alpha = 0;
-						 self.transform = CGAffineTransformMakeScale(0.00001, 0.00001);
-					 }
-					 completion:nil];
-	
-	[[self delegate] didDeleteItem:self];
-}
 
-- (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent *)event 
-{
-	[super touchesBegan:touches withEvent:event];
-	[[self nextResponder] touchesBegan:touches withEvent:event];
-}
-
-- (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent *)event 
-{
-	[super touchesMoved:touches withEvent:event];
-	[[self nextResponder] touchesMoved:touches withEvent:event];
-}
-
-- (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent *)event 
-{
-	[super touchesEnded:touches withEvent:event];
-	[[self nextResponder] touchesEnded:touches withEvent:event];
-}
-
-#pragma mark - Setters and Getters
-
--(void)setFrame:(CGRect)frame
-{
-	[super setFrame:frame];
-}
-
--(void)setDragging:(BOOL)flag
-{
-	if(dragging == flag)
-		return;
-	
-	dragging = flag;
-	
-	[UIView animateWithDuration:0.1
-						  delay:0 
-						options:UIViewAnimationOptionCurveEaseIn 
-					 animations:^{
-						 if(dragging) {
-							 self.transform = CGAffineTransformMakeScale(1.4, 1.4);
-							 self.alpha = 0.7;
-						 }
-						 else {
-							 self.transform = CGAffineTransformIdentity;
-							 self.alpha = 1;
-						 }
-					 }
-					 completion:nil];
-}
-
--(BOOL)dragging
-{
-	return dragging;
-}
-
--(BOOL)deletable
-{
-	return deletable;
-}
-
--(BOOL)titleBoundToBottom
-{
-    return titleBoundToBottom;
-}
-
--(void)setTitleBoundToBottom:(BOOL)bind
-{
-    titleBoundToBottom = bind;
-    [self layoutItem];
-}
-
--(NSString *)badgeText {
-    return self.badge.badgeText;
-}
-
--(void)setBadgeText:(NSString *)text {
-    if (text && [text length] > 0) {
-        [self setBadge:[CustomBadge customBadgeWithString:text]];
-    } else {
-        [self setBadge:nil];
-    }
-    [self layoutItem];
-}
-
--(void)setCustomBadge:(CustomBadge *)customBadge {
-    [self setBadge:customBadge];
-    [self layoutItem];
-}
 
 @end

@@ -1,9 +1,10 @@
 //
-//  MyLauncherItem.h
+//  MyLauncherViewControllerItem.h
 //  @rigoneri
 //  
 //  Copyright 2010 Rodrigo Neri
 //  Copyright 2011 David Jarrett
+//  Copyright 2012 Nicolas Desjardins
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -19,40 +20,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyLauncherItem.h"
 
-@class CustomBadge;
 
-@protocol MyLauncherItemDelegate <NSObject>
--(void)didDeleteItem:(id)item;
-@end
+@interface MyLauncherViewControllerItem : MyLauncherItem 
 
-@interface MyLauncherItem : UIControl {	
-	BOOL dragging;
-	BOOL deletable;
-    BOOL titleBoundToBottom;
-}
 
-@property (nonatomic, unsafe_unretained) id delegate;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *image;
 @property (nonatomic, strong) NSString *iPadImage;
 @property (nonatomic, strong) NSString *controllerStr;
 @property (nonatomic, strong) NSString *controllerTitle;
-@property (nonatomic, strong) UIButton *closeButton;
-@property (nonatomic, strong) CustomBadge *badge;
+
+
 
 -(id)initWithTitle:(NSString *)title image:(NSString *)image target:(NSString *)targetControllerStr deletable:(BOOL)_deletable;
 -(id)initWithTitle:(NSString *)title iPhoneImage:(NSString *)image iPadImage:(NSString *)iPadImage target:(NSString *)targetControllerStr targetTitle:(NSString *)targetTitle deletable:(BOOL)_deletable;
--(void)layoutItem;
--(void)setDragging:(BOOL)flag;
--(BOOL)dragging;
--(BOOL)deletable;
 
--(BOOL)titleBoundToBottom;
--(void)setTitleBoundToBottom:(BOOL)bind;
 
--(NSString *)badgeText;
--(void)setBadgeText:(NSString *)text;
--(void)setCustomBadge:(CustomBadge *)customBadge;
 
 @end
