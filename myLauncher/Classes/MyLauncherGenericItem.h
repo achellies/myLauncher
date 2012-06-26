@@ -27,10 +27,7 @@
 
 @interface MyLauncherGenericItem : MyLauncherItem
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) id<MyLauncherGenericItemDelegate> genericDelegate;
-
 
 -(id)initWithTitle:(NSString*)title delegate:(id<MyLauncherGenericItemDelegate>)genericDelegate deletable:(BOOL)deletable;
 

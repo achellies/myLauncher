@@ -42,7 +42,7 @@
 
 -(id)initWithTitle:(NSString*)title deletable:(BOOL)deletable;
 
--(NSDictionary*)itemToSave;
+-(NSMutableDictionary*)itemToSave;
 
 -(void)selected:(MyLauncherViewController*)parent;
 

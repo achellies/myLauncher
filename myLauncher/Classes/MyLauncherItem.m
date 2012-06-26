@@ -43,7 +43,14 @@
 
 -(void)selected:(MyLauncherViewController*)parent {}
 
--(NSDictionary*)itemToSave {return nil;}
+-(NSMutableDictionary*)itemToSave {
+    NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
+    [itemToSave setObject:self.title forKey:@"title"];
+    [itemToSave setObject:[NSString stringWithFormat:@"%d", _deletable] forKey:@"deletable"];
+    [itemToSave setObject:[NSNumber numberWithInt:3] forKey:@"myLauncherViewItemVersion"];
+    
+    return itemToSave;
+}
 
 -(void)layoutItem
 {
@@ -201,5 +208,7 @@
     [self setBadge:customBadge];
     [self layoutItem];
 }
+
+
 
 @end

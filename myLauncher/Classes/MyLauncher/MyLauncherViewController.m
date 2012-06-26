@@ -21,6 +21,7 @@
 
 #import "MyLauncherViewController.h"
 #import "MyLauncherItem.h"
+#import "MyLauncherGenericItem.h"
 
 @interface MyLauncherViewController ()
 -(NSMutableArray *)savedLauncherItems;
@@ -261,6 +262,22 @@
                                                target:[item objectForKey:@"controller"] 
                                                targetTitle:[item objectForKey:@"controllerTitle"]
                                                deletable:[[item objectForKey:@"deletable"] boolValue]]];
+                    } else if ([version intValue] == 3) {
+                        BOOL notGeneric = ![item objectForKey:@"genericDelegate"];
+                        if (notGeneric) {                    
+                            [savedPage addObject:[[MyLauncherViewControllerItem alloc]
+                                                  initWithTitle:[item objectForKey:@"title"]
+                                                  iPhoneImage:[item objectForKey:@"image"]
+                                                  iPadImage:[item objectForKey:@"iPadImage"]
+                                                  target:[item objectForKey:@"controller"] 
+                                                  targetTitle:[item objectForKey:@"controllerTitle"]
+                                                  deletable:[[item objectForKey:@"deletable"] boolValue]]];
+                        } else {
+                            [savedPage addObject:[[MyLauncherGenericItem alloc]
+                                                  initWithTitle:[item objectForKey:@"title"]
+                                                  delegate:[item objectForKey:@"genericDelegate"]
+                                                  deletable:[[item objectForKey:@"deletable"] boolValue]]];
+                        }                                          
                     }
                 } else {
                     [savedPage addObject:[[MyLauncherViewControllerItem alloc]

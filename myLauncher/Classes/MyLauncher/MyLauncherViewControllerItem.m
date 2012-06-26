@@ -73,18 +73,17 @@
     [parent launchSelectedItemViewController:controller withTopTitle:_controllerTitle];
 }
 
--(NSDictionary*)itemToSave {
-    NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
-    [itemToSave setObject:self.title forKey:@"title"];
+-(NSMutableDictionary*)itemToSave {
+    NSMutableDictionary *itemToSave = [super itemToSave];
+   
     [itemToSave setObject:_image forKey:@"image"];
     [itemToSave setObject:_iPadImage forKey:@"iPadImage"];
-    [itemToSave setObject:[NSString stringWithFormat:@"%d", _deletable] forKey:@"deletable"];
     [itemToSave setObject:_controllerStr forKey:@"controller"];
     [itemToSave setObject:_controllerTitle forKey:@"controllerTitle"];
-    [itemToSave setObject:[NSNumber numberWithInt:2] forKey:@"myLauncherViewItemVersion"];
-    
+
     return itemToSave;
 }
+
 #pragma mark - Layout
 
 -(void)layoutItem
