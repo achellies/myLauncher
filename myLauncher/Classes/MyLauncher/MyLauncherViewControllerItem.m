@@ -45,19 +45,13 @@
 
 -(id)initWithTitle:(NSString *)title iPhoneImage:(NSString *)image iPadImage:(NSString *)iPadImage target:(NSString *)targetControllerStr targetTitle:(NSString *)targetTitle deletable:(BOOL)_deletable {
     
-    if((self = [super init]))
-	{ 
-		dragging = NO;
-		deletable = _deletable;
-		
+    if((self = [super initWithDeletable:_deletable]))
+	{
 		[self setTitle:title];
 		[self setImage:image];
         [self setIPadImage:iPadImage];
 		[self setControllerStr:targetControllerStr];
         [self setControllerTitle:targetTitle];
-		
-		[self setCloseButton:[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0)]];
-		self.closeButton.hidden = YES;
 	}
 	return self;
 }

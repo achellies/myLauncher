@@ -35,6 +35,8 @@
 		E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17381599E5EB0073DA67 /* MyLauncherTests.m */; };
 		E30C17421599F29B0073DA67 /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17411599F29B0073DA67 /* MyLauncherItem.m */; };
 		E30C17431599F29B0073DA67 /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17411599F29B0073DA67 /* MyLauncherItem.m */; };
+		E30C1746159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */; };
+		E30C1747159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		E30C173A1599E5EB0073DA67 /* MyLauncherTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLauncherTests-Prefix.pch"; sourceTree = "<group>"; };
 		E30C17401599F29B0073DA67 /* MyLauncherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherItem.h; sourceTree = "<group>"; };
 		E30C17411599F29B0073DA67 /* MyLauncherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherItem.m; sourceTree = "<group>"; };
+		E30C1744159A04A10073DA67 /* MyLauncherGenericItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherGenericItem.h; sourceTree = "<group>"; };
+		E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherGenericItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				0F975C96122B4FAE00F678EB /* MyLauncherView.m */,
 				E30C17401599F29B0073DA67 /* MyLauncherItem.h */,
 				E30C17411599F29B0073DA67 /* MyLauncherItem.m */,
+				E30C1744159A04A10073DA67 /* MyLauncherGenericItem.h */,
+				E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */,
 				0F975C8F122B4FAE00F678EB /* MyLauncherViewControllerItem.h */,
 				0F975C90122B4FAE00F678EB /* MyLauncherViewControllerItem.m */,
 				0F975C93122B4FAE00F678EB /* MyLauncherScrollView.h */,
@@ -364,6 +370,7 @@
 				0F975C9D122B4FAE00F678EB /* MyLauncherViewController.m in Sources */,
 				7DC0590F1397988B00E0EAA9 /* CustomBadge.m in Sources */,
 				E30C17421599F29B0073DA67 /* MyLauncherItem.m in Sources */,
+				E30C1746159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +380,7 @@
 			files = (
 				E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */,
 				E30C17431599F29B0073DA67 /* MyLauncherItem.m in Sources */,
+				E30C1747159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

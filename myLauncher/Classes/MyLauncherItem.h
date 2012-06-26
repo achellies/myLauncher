@@ -38,6 +38,9 @@
 @property (nonatomic, strong) CustomBadge *badge;
 @property (nonatomic, strong) UIButton *closeButton;
 
+
+-(id)initWithDeletable:(BOOL)_deletable;
+
 -(NSDictionary*)itemToSave;
 
 -(void)selected:(MyLauncherViewController*)parent;

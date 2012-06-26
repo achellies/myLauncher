@@ -27,6 +27,18 @@
 @synthesize badge = _badge;
 @synthesize closeButton = _closeButton;
 
+-(id)initWithDeletable:(BOOL)_deletable {
+    if((self = [super init]))
+	{ 
+		dragging = NO;
+		deletable = _deletable;
+		
+		[self setCloseButton:[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0)]];
+		self.closeButton.hidden = YES;
+	}
+	return self;
+}
+
 -(void)selected:(MyLauncherViewController*)parent {}
 
 -(NSDictionary*)itemToSave {return nil;}
