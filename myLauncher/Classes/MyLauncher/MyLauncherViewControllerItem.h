@@ -22,6 +22,7 @@
 #import <UIKit/UIKit.h>
 #import "MyLauncherItem.h"
 
+#import "MyLauncherViewController.h"
 
 @interface MyLauncherViewControllerItem : MyLauncherItem 
 

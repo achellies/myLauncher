@@ -62,6 +62,14 @@
 	return self;
 }
 
+-(void)selected:(MyLauncherViewController*)parent {
+    
+    Class viewCtrClass = [[parent appControllers] objectForKey:_controllerStr];
+	UIViewController *controller = [[viewCtrClass alloc] init];
+    
+    [parent launchSelectedItemViewController:controller withTopTitle:_controllerTitle];
+}
+
 -(NSDictionary*)itemToSave {
     NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
     [itemToSave setObject:_title forKey:@"title"];

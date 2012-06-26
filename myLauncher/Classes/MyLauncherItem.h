@@ -22,6 +22,8 @@
 #import <Foundation/Foundation.h>
 #import "CustomBadge.h"
 
+@class MyLauncherViewController;
+
 @protocol MyLauncherItemDelegate <NSObject>
 -(void)didDeleteItem:(id)item;
 @end
@@ -37,6 +39,8 @@
 @property (nonatomic, strong) UIButton *closeButton;
 
 -(NSDictionary*)itemToSave;
+
+-(void)selected:(MyLauncherViewController*)parent;
 
 -(void)layoutItem;
 -(void)setDragging:(BOOL)flag;

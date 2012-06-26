@@ -19,6 +19,7 @@
 //
 
 #import "MyLauncherViewController.h"
+#import "MyLauncherItem.h"
 
 @interface MyLauncherViewController ()
 -(NSMutableArray *)savedLauncherItems;
@@ -119,15 +120,17 @@
     return ([self retrieveFromUserDefaults:@"myLauncherView"] != nil);
 }
 
--(void)launcherViewItemSelected:(MyLauncherViewControllerItem*)item {
+-(void)launcherViewItemSelected:(MyLauncherItem*)item {
+    [item selected:self];
+}
+
+-(void)launchSelectedItemViewController:(UIViewController*)itemViewController withTopTitle:(NSString*)title {
     if (![self appControllers] || [self launcherNavigationController]) {
         return;
     }
-    Class viewCtrClass = [[self appControllers] objectForKey:[item controllerStr]];
-	UIViewController *controller = [[viewCtrClass alloc] init];
 	
-	[self setLauncherNavigationController:[[UINavigationController alloc] initWithRootViewController:controller]];
-	[[self.launcherNavigationController topViewController] setTitle:item.controllerTitle];
+	[self setLauncherNavigationController:[[UINavigationController alloc] initWithRootViewController:itemViewController]];
+	[[self.launcherNavigationController topViewController] setTitle:title];
     [self.launcherNavigationController setDelegate:self];
 	
 	if(self.view.frame.size.width == 480)
@@ -135,12 +138,12 @@
     if(self.view.frame.size.width == 1024)
         self.launcherNavigationController.view.frame = CGRectMake(0, 0, 1024, 768);
 	
-	[controller.navigationItem setLeftBarButtonItem:
+	[itemViewController.navigationItem setLeftBarButtonItem:
 	 [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"launcher"]
 									  style:UIBarButtonItemStyleBordered 
 									 target:self 
 									 action:@selector(closeView)]];
-				
+    
 	UIView *viewToLaunch = [[self.launcherNavigationController topViewController] view];
 	
 	[self.parentViewController.view addSubview:[self.launcherNavigationController view]];

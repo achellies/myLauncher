@@ -27,6 +27,8 @@
 @synthesize badge = _badge;
 @synthesize closeButton = _closeButton;
 
+-(void)selected:(MyLauncherViewController*)parent {}
+
 -(NSDictionary*)itemToSave {return nil;}
 
 -(void)layoutItem {}

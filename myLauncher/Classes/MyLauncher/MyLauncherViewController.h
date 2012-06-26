@@ -35,4 +35,6 @@
 -(void)launcherViewItemSelected:(MyLauncherView*)item;
 -(void)closeView;
 
+-(void)launchSelectedItemViewController:(UIViewController*)itemViewController withTopTitle:(NSString*)title;
+
 @end
