@@ -28,6 +28,11 @@
 		7DA45DCD1316B0C700D5FA85 /* itemImage-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DA45DCB1316B0C700D5FA85 /* itemImage-iPad.png */; };
 		7DC0590F1397988B00E0EAA9 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0590E1397988B00E0EAA9 /* CustomBadge.m */; };
 		7DF382DA13326D0100738192 /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF382D913326D0100738192 /* Icon-iPad.png */; };
+		E30C172E1599E5EB0073DA67 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30C172D1599E5EB0073DA67 /* SenTestingKit.framework */; };
+		E30C172F1599E5EB0073DA67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		E30C17301599E5EB0073DA67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		E30C17361599E5EB0073DA67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E30C17341599E5EB0073DA67 /* InfoPlist.strings */; };
+		E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17381599E5EB0073DA67 /* MyLauncherTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,13 @@
 		7DC0590E1397988B00E0EAA9 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomBadge.m; path = MyLauncher/CustomBadge.m; sourceTree = "<group>"; };
 		7DF382D913326D0100738192 /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-iPad.png"; path = "imgs/Icon-iPad.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MyLauncher-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MyLauncher-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E30C172C1599E5EB0073DA67 /* MyLauncherTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLauncherTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E30C172D1599E5EB0073DA67 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E30C17331599E5EB0073DA67 /* MyLauncherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyLauncherTests-Info.plist"; sourceTree = "<group>"; };
+		E30C17351599E5EB0073DA67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E30C17371599E5EB0073DA67 /* MyLauncherTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLauncherTests.h; sourceTree = "<group>"; };
+		E30C17381599E5EB0073DA67 /* MyLauncherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLauncherTests.m; sourceTree = "<group>"; };
+		E30C173A1599E5EB0073DA67 /* MyLauncherTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLauncherTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +86,16 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E30C17281599E5EB0073DA67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E30C172E1599E5EB0073DA67 /* SenTestingKit.framework in Frameworks */,
+				E30C172F1599E5EB0073DA67 /* UIKit.framework in Frameworks */,
+				E30C17301599E5EB0073DA67 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* MyLauncher.app */,
+				E30C172C1599E5EB0073DA67 /* MyLauncherTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +168,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				E30C17311599E5EB0073DA67 /* MyLauncherTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -179,6 +203,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				E30C172D1599E5EB0073DA67 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,6 +215,26 @@
 				7DA45DCB1316B0C700D5FA85 /* itemImage-iPad.png */,
 			);
 			name = "Images@iPad";
+			sourceTree = "<group>";
+		};
+		E30C17311599E5EB0073DA67 /* MyLauncherTests */ = {
+			isa = PBXGroup;
+			children = (
+				E30C17371599E5EB0073DA67 /* MyLauncherTests.h */,
+				E30C17381599E5EB0073DA67 /* MyLauncherTests.m */,
+				E30C17321599E5EB0073DA67 /* Supporting Files */,
+			);
+			path = MyLauncherTests;
+			sourceTree = "<group>";
+		};
+		E30C17321599E5EB0073DA67 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E30C17331599E5EB0073DA67 /* MyLauncherTests-Info.plist */,
+				E30C17341599E5EB0073DA67 /* InfoPlist.strings */,
+				E30C173A1599E5EB0073DA67 /* MyLauncherTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +257,24 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* MyLauncher.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E30C172B1599E5EB0073DA67 /* MyLauncherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E30C173D1599E5EB0073DA67 /* Build configuration list for PBXNativeTarget "MyLauncherTests" */;
+			buildPhases = (
+				E30C17271599E5EB0073DA67 /* Sources */,
+				E30C17281599E5EB0073DA67 /* Frameworks */,
+				E30C17291599E5EB0073DA67 /* Resources */,
+				E30C172A1599E5EB0073DA67 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyLauncherTests;
+			productName = MyLauncherTests;
+			productReference = E30C172C1599E5EB0073DA67 /* MyLauncherTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,6 +295,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* MyLauncher */,
+				E30C172B1599E5EB0073DA67 /* MyLauncherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +316,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E30C17291599E5EB0073DA67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E30C17361599E5EB0073DA67 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E30C172A1599E5EB0073DA67 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -272,20 +360,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E30C17271599E5EB0073DA67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E30C17341599E5EB0073DA67 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E30C17351599E5EB0073DA67 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MyLauncher_Prefix.pch;
 				INFOPLIST_FILE = "MyLauncher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = MyLauncher;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,11 +403,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MyLauncher_Prefix.pch;
 				INFOPLIST_FILE = "MyLauncher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = MyLauncher;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -333,6 +442,58 @@
 			};
 			name = Release;
 		};
+		E30C173B1599E5EB0073DA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyLauncherTests/MyLauncherTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "MyLauncherTests/MyLauncherTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E30C173C1599E5EB0073DA67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyLauncherTests/MyLauncherTests-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "MyLauncherTests/MyLauncherTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -353,6 +514,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E30C173D1599E5EB0073DA67 /* Build configuration list for PBXNativeTarget "MyLauncherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E30C173B1599E5EB0073DA67 /* Debug */,
+				E30C173C1599E5EB0073DA67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

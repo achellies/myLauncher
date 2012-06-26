@@ -32,14 +32,14 @@
     BOOL titleBoundToBottom;
 }
 
-@property (nonatomic, assign) id delegate;
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *image;
-@property (nonatomic, retain) NSString *iPadImage;
-@property (nonatomic, retain) NSString *controllerStr;
-@property (nonatomic, retain) NSString *controllerTitle;
-@property (nonatomic, retain) UIButton *closeButton;
-@property (nonatomic, retain) CustomBadge *badge;
+@property (nonatomic, unsafe_unretained) id delegate;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *image;
+@property (nonatomic, strong) NSString *iPadImage;
+@property (nonatomic, strong) NSString *controllerStr;
+@property (nonatomic, strong) NSString *controllerTitle;
+@property (nonatomic, strong) UIButton *closeButton;
+@property (nonatomic, strong) CustomBadge *badge;
 
 -(id)initWithTitle:(NSString *)title image:(NSString *)image target:(NSString *)targetControllerStr deletable:(BOOL)_deletable;
 -(id)initWithTitle:(NSString *)title iPhoneImage:(NSString *)image iPadImage:(NSString *)iPadImage target:(NSString *)targetControllerStr targetTitle:(NSString *)targetTitle deletable:(BOOL)_deletable;

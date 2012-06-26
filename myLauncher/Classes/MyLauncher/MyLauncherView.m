@@ -82,9 +82,9 @@ static const CGFloat iPadLandscapeYPadding = 30;
 -(void)savePages;
 -(void)saveToUserDefaults:(id)object key:(NSString *)key;
 -(UIDeviceOrientation)currentLayoutOrientation;
-@property (nonatomic, retain) NSTimer *itemHoldTimer;
-@property (nonatomic, retain) NSTimer *movePagesTimer;
-@property (nonatomic, retain) MyLauncherItem *draggingItem;
+@property (nonatomic, strong) NSTimer *itemHoldTimer;
+@property (nonatomic, strong) NSTimer *movePagesTimer;
+@property (nonatomic, strong) MyLauncherItem *draggingItem;
 @end
 
 @implementation MyLauncherView
