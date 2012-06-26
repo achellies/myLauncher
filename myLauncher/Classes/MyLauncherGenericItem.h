@@ -21,6 +21,7 @@
 @protocol MyLauncherGenericItemDelegate <NSObject>
 
 -(void)start;
+-(UIImage*)icon;
 
 @end
 
@@ -31,6 +32,6 @@
 @property (nonatomic, strong) id<MyLauncherGenericItemDelegate> genericDelegate;
 
 
--(id)initWithDelegate:(id<MyLauncherGenericItemDelegate>)genericDelegate deletable:(BOOL)_deletable;
+-(id)initWithTitle:(NSString*)title delegate:(id<MyLauncherGenericItemDelegate>)genericDelegate deletable:(BOOL)deletable;
 
 @end

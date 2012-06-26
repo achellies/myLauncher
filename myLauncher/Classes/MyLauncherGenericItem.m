@@ -20,8 +20,8 @@
 
 @implementation MyLauncherGenericItem
 
--(id)initWithDelegate:(id<MyLauncherGenericItemDelegate>)genericDelegate deletable:(BOOL)_deletable {
-    if((self = [super initWithDeletable:_deletable]))
+-(id)initWithTitle:(NSString*)title delegate:(id<MyLauncherGenericItemDelegate>)genericDelegate deletable:(BOOL)deletable {
+    if((self = [super initWithTitle:title deletable:deletable]))
 	{
         _genericDelegate = genericDelegate;
 	}
@@ -37,7 +37,8 @@
 }
 
 -(UIImage*)icon {
-    return [UIImage imageNamed:@"icon.png"];
+    return [_genericDelegate icon];
+    
 }
 
 @end

@@ -14,4 +14,8 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://google.com"]];
 }
 
+-(UIImage*)icon {
+    return [UIImage imageNamed:@"google-icon.png"];
+}
+
 @end

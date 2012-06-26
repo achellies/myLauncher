@@ -28,12 +28,13 @@
 @synthesize badge = _badge;
 @synthesize closeButton = _closeButton;
 
--(id)initWithDeletable:(BOOL)_deletable {
+-(id)initWithTitle:(NSString*)title deletable:(BOOL)deletable {
     if((self = [super init]))
 	{ 
-		dragging = NO;
-		deletable = _deletable;
-		
+		_dragging = NO;
+		_deletable = deletable;
+        _title = title;
+        
 		[self setCloseButton:[[UIButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0)]];
 		self.closeButton.hidden = YES;
 	}
@@ -67,7 +68,7 @@
         [self addSubview:self.badge];
     }
 	
-	if(deletable)
+	if(_deletable)
 	{
 		self.closeButton.frame = CGRectMake(itemImageX-10, itemImageY-10, 30, 30);
 		[self.closeButton setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
@@ -79,7 +80,7 @@
 	CGFloat itemLabelY = itemImageY + itemImage.bounds.size.height;
 	CGFloat itemLabelHeight = self.bounds.size.height - itemLabelY;
     
-    if (titleBoundToBottom) 
+    if (_titleBoundToBottom)
     {
         itemLabelHeight = 34;
         itemLabelY = (self.bounds.size.height + 6) - itemLabelHeight;
@@ -141,16 +142,16 @@
 
 -(void)setDragging:(BOOL)flag
 {
-	if(dragging == flag)
+	if(_dragging == flag)
 		return;
 	
-	dragging = flag;
+	_dragging = flag;
 	
 	[UIView animateWithDuration:0.1
 						  delay:0 
 						options:UIViewAnimationOptionCurveEaseIn 
 					 animations:^{
-						 if(dragging) {
+						 if(_dragging) {
 							 self.transform = CGAffineTransformMakeScale(1.4, 1.4);
 							 self.alpha = 0.7;
 						 }
@@ -164,22 +165,22 @@
 
 -(BOOL)dragging
 {
-	return dragging;
+	return _dragging;
 }
 
 -(BOOL)deletable
 {
-	return deletable;
+	return _deletable;
 }
 
 -(BOOL)titleBoundToBottom
 {
-    return titleBoundToBottom;
+    return _titleBoundToBottom;
 }
 
 -(void)setTitleBoundToBottom:(BOOL)bind
 {
-    titleBoundToBottom = bind;
+    _titleBoundToBottom = bind;
     [self layoutItem];
 }
 

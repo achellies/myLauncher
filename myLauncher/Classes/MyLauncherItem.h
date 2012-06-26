@@ -29,9 +29,9 @@
 @end
 
 @interface MyLauncherItem : UIControl {	
-	BOOL dragging;
-	BOOL deletable;
-    BOOL titleBoundToBottom;
+	BOOL _dragging;
+	BOOL _deletable;
+    BOOL _titleBoundToBottom;
 }
 
 @property (nonatomic, strong) NSString *title;
@@ -40,7 +40,7 @@
 @property (nonatomic, strong) UIButton *closeButton;
 
 
--(id)initWithDeletable:(BOOL)_deletable;
+-(id)initWithTitle:(NSString*)title deletable:(BOOL)deletable;
 
 -(NSDictionary*)itemToSave;
 

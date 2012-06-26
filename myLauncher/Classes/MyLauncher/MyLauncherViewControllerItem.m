@@ -33,20 +33,19 @@
 
 #pragma mark - Lifecycle
 
--(id)initWithTitle:(NSString *)title image:(NSString *)image target:(NSString *)targetControllerStr deletable:(BOOL)_deletable {
+-(id)initWithTitle:(NSString *)title image:(NSString *)image target:(NSString *)targetControllerStr deletable:(BOOL)deletable {
 	return [self initWithTitle:title 
                    iPhoneImage:image 
                      iPadImage:image 
                         target:targetControllerStr 
                    targetTitle:title 
-                     deletable:_deletable];
+                     deletable:deletable];
 }
 
--(id)initWithTitle:(NSString *)title iPhoneImage:(NSString *)image iPadImage:(NSString *)iPadImage target:(NSString *)targetControllerStr targetTitle:(NSString *)targetTitle deletable:(BOOL)_deletable {
+-(id)initWithTitle:(NSString *)title iPhoneImage:(NSString *)image iPadImage:(NSString *)iPadImage target:(NSString *)targetControllerStr targetTitle:(NSString *)targetTitle deletable:(BOOL)deletable {
     
-    if((self = [super initWithDeletable:_deletable]))
+    if((self = [super initWithTitle:title deletable:deletable]))
 	{
-		[self setTitle:title];
 		[self setImage:image];
         [self setIPadImage:iPadImage];
 		[self setControllerStr:targetControllerStr];
@@ -79,7 +78,7 @@
     [itemToSave setObject:self.title forKey:@"title"];
     [itemToSave setObject:_image forKey:@"image"];
     [itemToSave setObject:_iPadImage forKey:@"iPadImage"];
-    [itemToSave setObject:[NSString stringWithFormat:@"%d", deletable] forKey:@"deletable"];
+    [itemToSave setObject:[NSString stringWithFormat:@"%d", _deletable] forKey:@"deletable"];
     [itemToSave setObject:_controllerStr forKey:@"controller"];
     [itemToSave setObject:_controllerTitle forKey:@"controllerTitle"];
     [itemToSave setObject:[NSNumber numberWithInt:2] forKey:@"myLauncherViewItemVersion"];
@@ -116,7 +115,7 @@
         [self addSubview:self.badge];
     }
 	
-	if(deletable)
+	if(_deletable)
 	{
 		self.closeButton.frame = CGRectMake(itemImageX-10, itemImageY-10, 30, 30);
 		[self.closeButton setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
@@ -128,7 +127,7 @@
 	CGFloat itemLabelY = itemImageY + itemImage.bounds.size.height;
 	CGFloat itemLabelHeight = self.bounds.size.height - itemLabelY;
     
-    if (titleBoundToBottom) 
+    if (_titleBoundToBottom)
     {
         itemLabelHeight = 34;
         itemLabelY = (self.bounds.size.height + 6) - itemLabelHeight;

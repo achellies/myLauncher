@@ -45,7 +45,8 @@
         
 		[self.launcherView setPages:[NSMutableArray arrayWithObjects:
                                      [NSMutableArray arrayWithObjects: 
-                                      [[MyLauncherGenericItem alloc] initWithDelegate:urlItem                                                            
+                                      [[MyLauncherGenericItem alloc] initWithTitle:@"google"
+                                                                     delegate:urlItem
                                                                      deletable:NO],
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 2"
                                                                  iPhoneImage:@"itemImage" 
