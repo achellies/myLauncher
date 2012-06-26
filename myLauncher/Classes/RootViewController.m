@@ -20,6 +20,8 @@
 
 #import "RootViewController.h"
 #import "MyLauncherViewControllerItem.h"
+#import "MyLauncherGenericItem.h"
+#import "OpenWebURLItem.h"
 #import "CustomBadge.h"
 #import "ItemViewController.h"
 
@@ -39,14 +41,12 @@
 	
 	if(![self hasSavedLauncherItems])
 	{
-		[self.launcherView setPages:[NSMutableArray arrayWithObjects: 
+        OpenWebURLItem *urlItem = [[OpenWebURLItem alloc] init];
+        
+		[self.launcherView setPages:[NSMutableArray arrayWithObjects:
                                      [NSMutableArray arrayWithObjects: 
-                                      [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 1"
-                                                                 iPhoneImage:@"itemImage" 
-                                                                   iPadImage:@"itemImage-iPad"
-                                                                      target:@"ItemViewController" 
-                                                                 targetTitle:@"Item 1 View"
-                                                                   deletable:NO],
+                                      [[MyLauncherGenericItem alloc] initWithDelegate:urlItem                                                            
+                                                                     deletable:NO],
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 2"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"

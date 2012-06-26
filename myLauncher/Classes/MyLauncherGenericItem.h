@@ -28,6 +28,9 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) UIImage *image;
-@property (nonatomic, strong) id<MyLauncherGenericItemDelegate> delegte;
+@property (nonatomic, strong) id<MyLauncherGenericItemDelegate> genericDelegate;
+
+
+-(id)initWithDelegate:(id<MyLauncherGenericItemDelegate>)genericDelegate deletable:(BOOL)_deletable;
 
 @end

@@ -25,7 +25,6 @@
 @implementation MyLauncherViewControllerItem
 
 
-@synthesize title = _title;
 @synthesize image = _image;
 @synthesize iPadImage = _iPadImage;
 @synthesize controllerStr = _controllerStr;
@@ -56,6 +55,17 @@
 	return self;
 }
 
+-(UIImage*)icon {
+    UIImage *image = nil;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && [self iPadImage]) {
+        image = [UIImage imageNamed:self.iPadImage];
+    } else {
+        image = [UIImage imageNamed:self.image];
+    }
+    
+    return image;
+}
+
 -(void)selected:(MyLauncherViewController*)parent {
     
     Class viewCtrClass = [[parent appControllers] objectForKey:_controllerStr];
@@ -66,7 +76,7 @@
 
 -(NSDictionary*)itemToSave {
     NSMutableDictionary *itemToSave = [[NSMutableDictionary alloc] init];
-    [itemToSave setObject:_title forKey:@"title"];
+    [itemToSave setObject:self.title forKey:@"title"];
     [itemToSave setObject:_image forKey:@"image"];
     [itemToSave setObject:_iPadImage forKey:@"iPadImage"];
     [itemToSave setObject:[NSString stringWithFormat:@"%d", deletable] forKey:@"deletable"];

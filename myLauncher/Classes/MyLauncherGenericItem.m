@@ -20,6 +20,24 @@
 
 @implementation MyLauncherGenericItem
 
+-(id)initWithDelegate:(id<MyLauncherGenericItemDelegate>)genericDelegate deletable:(BOOL)_deletable {
+    if((self = [super initWithDeletable:_deletable]))
+	{
+        _genericDelegate = genericDelegate;
+	}
+	return self;
+}
 
+-(NSDictionary*)itemToSave {return [[NSDictionary alloc] init];}
+
+
+-(void)selected:(MyLauncherViewController*)parent {
+    
+    [_genericDelegate start];
+}
+
+-(UIImage*)icon {
+    return [UIImage imageNamed:@"icon.png"];
+}
 
 @end

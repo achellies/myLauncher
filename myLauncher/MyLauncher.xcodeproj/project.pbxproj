@@ -37,6 +37,8 @@
 		E30C17431599F29B0073DA67 /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17411599F29B0073DA67 /* MyLauncherItem.m */; };
 		E30C1746159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */; };
 		E30C1747159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */; };
+		E30C174A159A22960073DA67 /* OpenWebURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1749159A22950073DA67 /* OpenWebURLItem.m */; };
+		E30C174B159A22960073DA67 /* OpenWebURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1749159A22950073DA67 /* OpenWebURLItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		E30C17411599F29B0073DA67 /* MyLauncherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherItem.m; sourceTree = "<group>"; };
 		E30C1744159A04A10073DA67 /* MyLauncherGenericItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherGenericItem.h; sourceTree = "<group>"; };
 		E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherGenericItem.m; sourceTree = "<group>"; };
+		E30C1748159A22950073DA67 /* OpenWebURLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWebURLItem.h; sourceTree = "<group>"; };
+		E30C1749159A22950073DA67 /* OpenWebURLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWebURLItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				0F975C2D122B0E8300F678EB /* RootViewController.m */,
 				0F1328EC120637BC00C7C87C /* ItemViewController.h */,
 				0F1328ED120637BC00C7C87C /* ItemViewController.m */,
+				E30C1748159A22950073DA67 /* OpenWebURLItem.h */,
+				E30C1749159A22950073DA67 /* OpenWebURLItem.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				7DC0590F1397988B00E0EAA9 /* CustomBadge.m in Sources */,
 				E30C17421599F29B0073DA67 /* MyLauncherItem.m in Sources */,
 				E30C1746159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */,
+				E30C174A159A22960073DA67 /* OpenWebURLItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +388,7 @@
 				E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */,
 				E30C17431599F29B0073DA67 /* MyLauncherItem.m in Sources */,
 				E30C1747159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */,
+				E30C174B159A22960073DA67 /* OpenWebURLItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

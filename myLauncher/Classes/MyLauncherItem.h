@@ -34,6 +34,7 @@
     BOOL titleBoundToBottom;
 }
 
+@property (nonatomic, strong) NSString *title;
 @property (nonatomic, unsafe_unretained) id delegate;
 @property (nonatomic, strong) CustomBadge *badge;
 @property (nonatomic, strong) UIButton *closeButton;

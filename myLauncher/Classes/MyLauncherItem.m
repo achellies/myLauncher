@@ -23,6 +23,7 @@
 
 @implementation MyLauncherItem
 
+@synthesize title = _title;
 @synthesize delegate = _delegate;
 @synthesize badge = _badge;
 @synthesize closeButton = _closeButton;
@@ -43,7 +44,61 @@
 
 -(NSDictionary*)itemToSave {return nil;}
 
--(void)layoutItem {}
+-(void)layoutItem
+{
+    UIImage *image = [self icon];
+	if(!image)
+		return;
+	
+	for(id subview in [self subviews]) 
+		[subview removeFromSuperview];
+	
+    
+	UIImageView *itemImage = [[UIImageView alloc] initWithImage:image];
+	CGFloat itemImageX = (self.bounds.size.width/2) - (itemImage.bounds.size.width/2);
+	CGFloat itemImageY = (self.bounds.size.height/2) - (itemImage.bounds.size.height/2);
+	itemImage.frame = CGRectMake(itemImageX, itemImageY, itemImage.bounds.size.width, itemImage.bounds.size.height);
+	[self addSubview:itemImage];
+    CGFloat itemImageWidth = itemImage.bounds.size.width;
+    
+    if(self.badge) {
+        self.badge.frame = CGRectMake((itemImageX + itemImageWidth) - (self.badge.bounds.size.width - 6), 
+                                      itemImageY-6, self.badge.bounds.size.width, self.badge.bounds.size.height);
+        [self addSubview:self.badge];
+    }
+	
+	if(deletable)
+	{
+		self.closeButton.frame = CGRectMake(itemImageX-10, itemImageY-10, 30, 30);
+		[self.closeButton setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+		self.closeButton.backgroundColor = [UIColor clearColor];
+		[self.closeButton addTarget:self action:@selector(closeItem:) forControlEvents:UIControlEventTouchUpInside];
+		[self addSubview:self.closeButton];
+	}
+	
+	CGFloat itemLabelY = itemImageY + itemImage.bounds.size.height;
+	CGFloat itemLabelHeight = self.bounds.size.height - itemLabelY;
+    
+    if (titleBoundToBottom) 
+    {
+        itemLabelHeight = 34;
+        itemLabelY = (self.bounds.size.height + 6) - itemLabelHeight;
+    }
+	
+	UILabel *itemLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, itemLabelY, self.bounds.size.width, itemLabelHeight)];
+	itemLabel.backgroundColor = [UIColor clearColor];
+	itemLabel.font = [UIFont boldSystemFontOfSize:11];
+	itemLabel.textColor = COLOR(46, 46, 46);
+	itemLabel.textAlignment = UITextAlignmentCenter;
+	itemLabel.lineBreakMode = UILineBreakModeTailTruncation;
+	itemLabel.text = self.title;
+	itemLabel.numberOfLines = 2;
+	[self addSubview:itemLabel];
+}
+
+-(UIImage*)icon {
+    return nil;
+}
 
 -(void)closeItem:(id)sender
 {
