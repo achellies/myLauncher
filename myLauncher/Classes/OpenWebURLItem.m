@@ -15,7 +15,7 @@
 }
 
 -(UIImage*)icon {
-    return [UIImage imageNamed:@"google-icon.png"];
+    return [UIImage imageNamed:@"Google-icon.png"];
 }
 
 @end
