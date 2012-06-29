@@ -30,7 +30,6 @@
 @property (nonatomic, strong) MyLauncherView *launcherView;
 @property (nonatomic, strong) NSMutableDictionary *appControllers;
 
-
 -(BOOL)hasSavedLauncherItems;
 -(void)clearSavedLauncherItems;
 
