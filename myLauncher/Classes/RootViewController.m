@@ -4,6 +4,7 @@
 //  
 //  Copyright 2010 Rodrigo Neri
 //  Copyright 2011 David Jarrett
+//  Copyright 2012 Nicolas Desjardins
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -41,7 +42,6 @@
 	
 	if(![self hasSavedLauncherItems])
 	{
-        
         OpenWebURLItem *urlItem = [[OpenWebURLItem alloc] initWithURL:@"http://google.com" andIcon:[UIImage imageNamed:@"Google-icon.png"]];
         
 		[self.launcherView setPages:[NSMutableArray arrayWithObjects:
@@ -49,36 +49,42 @@
                                       [[MyLauncherGenericItem alloc] initWithTitle:@"google"
                                                                      delegate:urlItem
                                                                      deletable:NO],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 2"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 2 View" 
                                                                    deletable:NO],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 3"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 3 View"
                                                                    deletable:YES],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 4"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 4 View"
                                                                    deletable:NO],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 5"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 5 View"
                                                                    deletable:YES],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 6"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 6 View"
                                                                    deletable:NO],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 7"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
@@ -93,12 +99,14 @@
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 8 View"
                                                                    deletable:NO],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 9"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"
                                                                       target:@"ItemViewController" 
                                                                  targetTitle:@"Item 9 View"
                                                                    deletable:YES],
+                                      
                                       [[MyLauncherViewControllerItem alloc] initWithTitle:@"Item 10"
                                                                  iPhoneImage:@"itemImage" 
                                                                    iPadImage:@"itemImage-iPad"

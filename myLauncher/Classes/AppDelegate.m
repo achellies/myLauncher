@@ -4,6 +4,7 @@
 //  
 //  Copyright 2010 Rodrigo Neri
 //  Copyright 2011 David Jarrett
+//  Copyright 2012 Nicolas Desjardins
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -39,7 +40,7 @@
 	
     [window setRootViewController:navigationController];
     [window makeKeyAndVisible];
-    //[window layoutSubviews];
+
 }
 
 @end
