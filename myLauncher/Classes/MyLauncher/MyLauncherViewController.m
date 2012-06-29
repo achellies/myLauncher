@@ -240,6 +240,25 @@
 
 #pragma mark - myLauncher caching
 
+- (void)processVersion3Item:(NSDictionary *)item savedPage:(NSMutableArray *)savedPage {
+    BOOL notGeneric = ![item objectForKey:@"genericDelegate"];
+    if (notGeneric) {                    
+        [savedPage addObject:[[MyLauncherViewControllerItem alloc]
+                              initWithTitle:[item objectForKey:@"title"]
+                              iPhoneImage:[item objectForKey:@"image"]
+                              iPadImage:[item objectForKey:@"iPadImage"]
+                              target:[item objectForKey:@"controller"] 
+                              targetTitle:[item objectForKey:@"controllerTitle"]
+                              deletable:[[item objectForKey:@"deletable"] boolValue]]];
+    } else {
+        id delegate = [NSKeyedUnarchiver unarchiveObjectWithData:(NSData*)[item objectForKey:@"genericDelegate"]];
+        [savedPage addObject:[[MyLauncherGenericItem alloc]
+                              initWithTitle:[item objectForKey:@"title"]
+                              delegate:delegate
+                              deletable:[[item objectForKey:@"deletable"] boolValue]]];
+    }
+}
+
 -(NSMutableArray *)savedLauncherItems {
 	NSArray *savedPages = (NSArray *)[self retrieveFromUserDefaults:@"myLauncherView"];
 	
@@ -263,21 +282,7 @@
                                                targetTitle:[item objectForKey:@"controllerTitle"]
                                                deletable:[[item objectForKey:@"deletable"] boolValue]]];
                     } else if ([version intValue] == 3) {
-                        BOOL notGeneric = ![item objectForKey:@"genericDelegate"];
-                        if (notGeneric) {                    
-                            [savedPage addObject:[[MyLauncherViewControllerItem alloc]
-                                                  initWithTitle:[item objectForKey:@"title"]
-                                                  iPhoneImage:[item objectForKey:@"image"]
-                                                  iPadImage:[item objectForKey:@"iPadImage"]
-                                                  target:[item objectForKey:@"controller"] 
-                                                  targetTitle:[item objectForKey:@"controllerTitle"]
-                                                  deletable:[[item objectForKey:@"deletable"] boolValue]]];
-                        } else {
-                            [savedPage addObject:[[MyLauncherGenericItem alloc]
-                                                  initWithTitle:[item objectForKey:@"title"]
-                                                  delegate:[item objectForKey:@"genericDelegate"]
-                                                  deletable:[[item objectForKey:@"deletable"] boolValue]]];
-                        }                                          
+                        [self processVersion3Item:item savedPage:savedPage];                                          
                     }
                 } else {
                     [savedPage addObject:[[MyLauncherViewControllerItem alloc]
@@ -306,10 +311,9 @@
 	NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 	
 	if (standardUserDefaults) {
-        NSData *data = [standardUserDefaults objectForKey:key];
-        if (data) {
-            NSDictionary *dic = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-            return dic;
+        NSDictionary *dic = [standardUserDefaults objectForKey:key];
+        if (dic) {
+           return dic;
         }
 		
     }

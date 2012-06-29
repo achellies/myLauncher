@@ -41,7 +41,8 @@
 	
 	if(![self hasSavedLauncherItems])
 	{
-        OpenWebURLItem *urlItem = [[OpenWebURLItem alloc] init];
+        
+        OpenWebURLItem *urlItem = [[OpenWebURLItem alloc] initWithURL:@"http://google.com" andIcon:[UIImage imageNamed:@"Google-icon.png"]];
         
 		[self.launcherView setPages:[NSMutableArray arrayWithObjects:
                                      [NSMutableArray arrayWithObjects: 

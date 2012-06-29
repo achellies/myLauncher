@@ -37,10 +37,9 @@
 							[[RootViewController alloc] init]];
 	navigationController.navigationBar.tintColor = COLOR(2, 100, 162);
 	
-
     [window setRootViewController:navigationController];
     [window makeKeyAndVisible];
-    [window layoutSubviews];    
+    //[window layoutSubviews];
 }
 
 @end

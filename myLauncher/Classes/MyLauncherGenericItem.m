@@ -43,7 +43,8 @@
 -(NSMutableDictionary*)itemToSave {
     NSMutableDictionary *itemToSave = [super itemToSave];
     
-    [itemToSave setObject:_genericDelegate forKey:@"genericDelegate"];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:_genericDelegate];
+    [itemToSave setObject:data forKey:@"genericDelegate"];
     
     return itemToSave;
 }

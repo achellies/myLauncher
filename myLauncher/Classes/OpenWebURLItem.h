@@ -11,4 +11,9 @@
 
 @interface OpenWebURLItem : NSObject<MyLauncherGenericItemDelegate, NSCoding>
 
+@property(strong, nonatomic) NSString *url;
+@property(strong, nonatomic) UIImage *icon;
+
+-(id) initWithURL:(NSString*)url andIcon:(UIImage*)icon;
+
 @end
