@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "MyLauncherGenericItem.h"
 
-@interface OpenWebURLItem : NSObject<MyLauncherGenericItemDelegate>
+@interface OpenWebURLItem : NSObject<MyLauncherGenericItemDelegate, NSCoding>
 
 @end

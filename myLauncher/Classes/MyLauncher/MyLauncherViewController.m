@@ -305,8 +305,14 @@
 -(id)retrieveFromUserDefaults:(NSString *)key {
 	NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 	
-	if (standardUserDefaults) 
-		return [standardUserDefaults objectForKey:key];
+	if (standardUserDefaults) {
+        NSData *data = [standardUserDefaults objectForKey:key];
+        if (data) {
+            NSDictionary *dic = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+            return dic;
+        }
+		
+    }
 	return nil;
 }
 

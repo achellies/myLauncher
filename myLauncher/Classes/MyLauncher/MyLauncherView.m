@@ -800,7 +800,10 @@ static const CGFloat iPadLandscapeYPadding = 30;
 		for(MyLauncherItem *item in page)
 		{
             NSDictionary *itemToSave = [item itemToSave];
-			[pageToSave addObject:itemToSave];
+            NSData *data = [NSKeyedArchiver archivedDataWithRootObject:itemToSave];
+            if (data) {
+                [pageToSave addObject:itemToSave];
+            }
 		}
 		[pagesToSave addObject:pageToSave];
 	}
