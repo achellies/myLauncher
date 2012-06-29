@@ -52,5 +52,4 @@
     NSData *data = UIImagePNGRepresentation(_icon);
     [coder encodeObject:data forKey:@"icon"];
 }
-
 @end
