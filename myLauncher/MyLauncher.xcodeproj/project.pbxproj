@@ -33,10 +33,6 @@
 		E30C17301599E5EB0073DA67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		E30C17361599E5EB0073DA67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E30C17341599E5EB0073DA67 /* InfoPlist.strings */; };
 		E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17381599E5EB0073DA67 /* MyLauncherTests.m */; };
-		E30C17421599F29B0073DA67 /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17411599F29B0073DA67 /* MyLauncherItem.m */; };
-		E30C17431599F29B0073DA67 /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17411599F29B0073DA67 /* MyLauncherItem.m */; };
-		E30C1746159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */; };
-		E30C1747159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */; };
 		E30C174A159A22960073DA67 /* OpenWebURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1749159A22950073DA67 /* OpenWebURLItem.m */; };
 		E30C174B159A22960073DA67 /* OpenWebURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C1749159A22950073DA67 /* OpenWebURLItem.m */; };
 		E30C1756159A33C20073DA67 /* Google-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E30C1755159A33C20073DA67 /* Google-icon.png */; };
@@ -45,6 +41,8 @@
 		E30C175A159A33C80073DA67 /* Google-icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = E30C1758159A33C80073DA67 /* Google-icon-iPad.png */; };
 		E30C175C159A33D20073DA67 /* Google-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E30C175B159A33D20073DA67 /* Google-icon@2x.png */; };
 		E30C175D159A33D20073DA67 /* Google-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E30C175B159A33D20073DA67 /* Google-icon@2x.png */; };
+		E3A83CC7159E2F6C006CCA39 /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A83CC6159E2F6C006CCA39 /* MyLauncherItem.m */; };
+		E3CCD6A215A31E3E005FC746 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD68415A31C92005FC746 /* MyLauncherGenericItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +55,7 @@
 		0F975C2C122B0E8300F678EB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		0F975C2D122B0E8300F678EB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0F975C8F122B4FAE00F678EB /* MyLauncherViewControllerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherViewControllerItem.h; path = MyLauncher/MyLauncherViewControllerItem.h; sourceTree = "<group>"; };
-		0F975C90122B4FAE00F678EB /* MyLauncherViewControllerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MyLauncherViewControllerItem.m; path = MyLauncher/MyLauncherViewControllerItem.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		0F975C90122B4FAE00F678EB /* MyLauncherViewControllerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MyLauncherViewControllerItem.m; path = MyLauncher/MyLauncherViewControllerItem.m; sourceTree = "<group>"; };
 		0F975C91122B4FAE00F678EB /* MyLauncherPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherPageControl.h; path = MyLauncher/MyLauncherPageControl.h; sourceTree = "<group>"; };
 		0F975C92122B4FAE00F678EB /* MyLauncherPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLauncherPageControl.m; path = MyLauncher/MyLauncherPageControl.m; sourceTree = "<group>"; };
 		0F975C93122B4FAE00F678EB /* MyLauncherScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherScrollView.h; path = MyLauncher/MyLauncherScrollView.h; sourceTree = "<group>"; };
@@ -88,15 +86,15 @@
 		E30C17371599E5EB0073DA67 /* MyLauncherTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLauncherTests.h; sourceTree = "<group>"; };
 		E30C17381599E5EB0073DA67 /* MyLauncherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLauncherTests.m; sourceTree = "<group>"; };
 		E30C173A1599E5EB0073DA67 /* MyLauncherTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLauncherTests-Prefix.pch"; sourceTree = "<group>"; };
-		E30C17401599F29B0073DA67 /* MyLauncherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherItem.h; sourceTree = "<group>"; };
-		E30C17411599F29B0073DA67 /* MyLauncherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherItem.m; sourceTree = "<group>"; };
-		E30C1744159A04A10073DA67 /* MyLauncherGenericItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherGenericItem.h; sourceTree = "<group>"; };
-		E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherGenericItem.m; sourceTree = "<group>"; };
 		E30C1748159A22950073DA67 /* OpenWebURLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenWebURLItem.h; sourceTree = "<group>"; };
 		E30C1749159A22950073DA67 /* OpenWebURLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenWebURLItem.m; sourceTree = "<group>"; };
 		E30C1755159A33C20073DA67 /* Google-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-icon.png"; sourceTree = "<group>"; };
 		E30C1758159A33C80073DA67 /* Google-icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-icon-iPad.png"; sourceTree = "<group>"; };
 		E30C175B159A33D20073DA67 /* Google-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-icon@2x.png"; sourceTree = "<group>"; };
+		E3A83CC5159E2F6C006CCA39 /* MyLauncherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherItem.h; path = MyLauncher/MyLauncherItem.h; sourceTree = "<group>"; };
+		E3A83CC6159E2F6C006CCA39 /* MyLauncherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLauncherItem.m; path = MyLauncher/MyLauncherItem.m; sourceTree = "<group>"; };
+		E3CCD68415A31C92005FC746 /* MyLauncherGenericItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLauncherGenericItem.m; path = MyLauncher/MyLauncherGenericItem.m; sourceTree = "<group>"; };
+		E3CCD6A015A31E2F005FC746 /* MyLauncherGenericItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherGenericItem.h; path = ../../../../bitbucket/iOSLauncher/LanceurMobile/LanceurMobile/MyLauncher/MyLauncherGenericItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,16 +160,16 @@
 		0F975B02122AFC3B00F678EB /* MyLauncher */ = {
 			isa = PBXGroup;
 			children = (
+				E3CCD6A015A31E2F005FC746 /* MyLauncherGenericItem.h */,
+				E3CCD68415A31C92005FC746 /* MyLauncherGenericItem.m */,
+				E3A83CC5159E2F6C006CCA39 /* MyLauncherItem.h */,
+				E3A83CC6159E2F6C006CCA39 /* MyLauncherItem.m */,
 				7DC0590D1397988B00E0EAA9 /* CustomBadge.h */,
 				7DC0590E1397988B00E0EAA9 /* CustomBadge.m */,
 				0F975C97122B4FAE00F678EB /* MyLauncherViewController.h */,
 				0F975C98122B4FAE00F678EB /* MyLauncherViewController.m */,
 				0F975C95122B4FAE00F678EB /* MyLauncherView.h */,
 				0F975C96122B4FAE00F678EB /* MyLauncherView.m */,
-				E30C17401599F29B0073DA67 /* MyLauncherItem.h */,
-				E30C17411599F29B0073DA67 /* MyLauncherItem.m */,
-				E30C1744159A04A10073DA67 /* MyLauncherGenericItem.h */,
-				E30C1745159A04A10073DA67 /* MyLauncherGenericItem.m */,
 				0F975C8F122B4FAE00F678EB /* MyLauncherViewControllerItem.h */,
 				0F975C90122B4FAE00F678EB /* MyLauncherViewControllerItem.m */,
 				0F975C93122B4FAE00F678EB /* MyLauncherScrollView.h */,
@@ -393,9 +391,9 @@
 				0F975C9C122B4FAE00F678EB /* MyLauncherView.m in Sources */,
 				0F975C9D122B4FAE00F678EB /* MyLauncherViewController.m in Sources */,
 				7DC0590F1397988B00E0EAA9 /* CustomBadge.m in Sources */,
-				E30C17421599F29B0073DA67 /* MyLauncherItem.m in Sources */,
-				E30C1746159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */,
 				E30C174A159A22960073DA67 /* OpenWebURLItem.m in Sources */,
+				E3A83CC7159E2F6C006CCA39 /* MyLauncherItem.m in Sources */,
+				E3CCD6A215A31E3E005FC746 /* MyLauncherGenericItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,8 +402,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */,
-				E30C17431599F29B0073DA67 /* MyLauncherItem.m in Sources */,
-				E30C1747159A04A10073DA67 /* MyLauncherGenericItem.m in Sources */,
 				E30C174B159A22960073DA67 /* OpenWebURLItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
