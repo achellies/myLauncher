@@ -94,7 +94,7 @@
 		E3A83CC5159E2F6C006CCA39 /* MyLauncherItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherItem.h; path = MyLauncher/MyLauncherItem.h; sourceTree = "<group>"; };
 		E3A83CC6159E2F6C006CCA39 /* MyLauncherItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLauncherItem.m; path = MyLauncher/MyLauncherItem.m; sourceTree = "<group>"; };
 		E3CCD68415A31C92005FC746 /* MyLauncherGenericItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLauncherGenericItem.m; path = MyLauncher/MyLauncherGenericItem.m; sourceTree = "<group>"; };
-		E3CCD6A015A31E2F005FC746 /* MyLauncherGenericItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherGenericItem.h; path = ../../../../bitbucket/iOSLauncher/LanceurMobile/LanceurMobile/MyLauncher/MyLauncherGenericItem.h; sourceTree = "<group>"; };
+		E3CCD6C815A32447005FC746 /* MyLauncherGenericItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherGenericItem.h; path = MyLauncher/MyLauncherGenericItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 		0F975B02122AFC3B00F678EB /* MyLauncher */ = {
 			isa = PBXGroup;
 			children = (
-				E3CCD6A015A31E2F005FC746 /* MyLauncherGenericItem.h */,
+				E3CCD6C815A32447005FC746 /* MyLauncherGenericItem.h */,
 				E3CCD68415A31C92005FC746 /* MyLauncherGenericItem.m */,
 				E3A83CC5159E2F6C006CCA39 /* MyLauncherItem.h */,
 				E3A83CC6159E2F6C006CCA39 /* MyLauncherItem.m */,
