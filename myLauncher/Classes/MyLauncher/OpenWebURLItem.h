@@ -1,6 +1,5 @@
 //
 //  MyLauncherGenericItem.h
-//  @rigoneri
 //
 //  Copyright 2012 Nicolas Desjardins
 //
