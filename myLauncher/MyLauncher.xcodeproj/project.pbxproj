@@ -28,11 +28,13 @@
 		7DA45DCD1316B0C700D5FA85 /* itemImage-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DA45DCB1316B0C700D5FA85 /* itemImage-iPad.png */; };
 		7DC0590F1397988B00E0EAA9 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0590E1397988B00E0EAA9 /* CustomBadge.m */; };
 		7DF382DA13326D0100738192 /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF382D913326D0100738192 /* Icon-iPad.png */; };
+		E30AA30615A491EA00B6078B /* OpenWebURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD6E815A32B0D005FC746 /* OpenWebURLItem.m */; };
+		E30AA30F15A4993100B6078B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E30AA30715A4993100B6078B /* libOCMock.a */; };
 		E30C172E1599E5EB0073DA67 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30C172D1599E5EB0073DA67 /* SenTestingKit.framework */; };
 		E30C172F1599E5EB0073DA67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		E30C17301599E5EB0073DA67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		E30C17361599E5EB0073DA67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E30C17341599E5EB0073DA67 /* InfoPlist.strings */; };
-		E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17381599E5EB0073DA67 /* MyLauncherTests.m */; };
+		E30C17391599E5EB0073DA67 /* OpenWebURLItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E30C17381599E5EB0073DA67 /* OpenWebURLItemTest.m */; };
 		E30C1756159A33C20073DA67 /* Google-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E30C1755159A33C20073DA67 /* Google-icon.png */; };
 		E30C1757159A33C20073DA67 /* Google-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E30C1755159A33C20073DA67 /* Google-icon.png */; };
 		E30C1759159A33C80073DA67 /* Google-icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = E30C1758159A33C80073DA67 /* Google-icon-iPad.png */; };
@@ -78,12 +80,19 @@
 		7DC0590E1397988B00E0EAA9 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomBadge.m; path = MyLauncher/CustomBadge.m; sourceTree = "<group>"; };
 		7DF382D913326D0100738192 /* Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-iPad.png"; path = "imgs/Icon-iPad.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MyLauncher-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MyLauncher-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E30AA30715A4993100B6078B /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		E30AA30915A4993100B6078B /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		E30AA30A15A4993100B6078B /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		E30AA30B15A4993100B6078B /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		E30AA30C15A4993100B6078B /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		E30AA30D15A4993100B6078B /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		E30AA30E15A4993100B6078B /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
 		E30C172C1599E5EB0073DA67 /* MyLauncherTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLauncherTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30C172D1599E5EB0073DA67 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E30C17331599E5EB0073DA67 /* MyLauncherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyLauncherTests-Info.plist"; sourceTree = "<group>"; };
 		E30C17351599E5EB0073DA67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E30C17371599E5EB0073DA67 /* MyLauncherTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLauncherTests.h; sourceTree = "<group>"; };
-		E30C17381599E5EB0073DA67 /* MyLauncherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLauncherTests.m; sourceTree = "<group>"; };
+		E30C17371599E5EB0073DA67 /* OpenWebURLItemTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenWebURLItemTest.h; sourceTree = "<group>"; };
+		E30C17381599E5EB0073DA67 /* OpenWebURLItemTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenWebURLItemTest.m; sourceTree = "<group>"; };
 		E30C173A1599E5EB0073DA67 /* MyLauncherTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLauncherTests-Prefix.pch"; sourceTree = "<group>"; };
 		E30C1755159A33C20073DA67 /* Google-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-icon.png"; sourceTree = "<group>"; };
 		E30C1758159A33C80073DA67 /* Google-icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-icon-iPad.png"; sourceTree = "<group>"; };
@@ -114,6 +123,7 @@
 				E30C172E1599E5EB0073DA67 /* SenTestingKit.framework in Frameworks */,
 				E30C172F1599E5EB0073DA67 /* UIKit.framework in Frameworks */,
 				E30C17301599E5EB0073DA67 /* Foundation.framework in Frameworks */,
+				E30AA30F15A4993100B6078B /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +236,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E30AA30715A4993100B6078B /* libOCMock.a */,
+				E30AA30815A4993100B6078B /* OCMock */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -244,11 +256,24 @@
 			name = "Images@iPad";
 			sourceTree = "<group>";
 		};
+		E30AA30815A4993100B6078B /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				E30AA30915A4993100B6078B /* NSNotificationCenter+OCMAdditions.h */,
+				E30AA30A15A4993100B6078B /* OCMArg.h */,
+				E30AA30B15A4993100B6078B /* OCMConstraint.h */,
+				E30AA30C15A4993100B6078B /* OCMock.h */,
+				E30AA30D15A4993100B6078B /* OCMockObject.h */,
+				E30AA30E15A4993100B6078B /* OCMockRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
 		E30C17311599E5EB0073DA67 /* MyLauncherTests */ = {
 			isa = PBXGroup;
 			children = (
-				E30C17371599E5EB0073DA67 /* MyLauncherTests.h */,
-				E30C17381599E5EB0073DA67 /* MyLauncherTests.m */,
+				E30C17371599E5EB0073DA67 /* OpenWebURLItemTest.h */,
+				E30C17381599E5EB0073DA67 /* OpenWebURLItemTest.m */,
 				E30C17321599E5EB0073DA67 /* Supporting Files */,
 			);
 			path = MyLauncherTests;
@@ -400,7 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E30C17391599E5EB0073DA67 /* MyLauncherTests.m in Sources */,
+				E30C17391599E5EB0073DA67 /* OpenWebURLItemTest.m in Sources */,
+				E30AA30615A491EA00B6078B /* OpenWebURLItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,8 +526,21 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				INFOPLIST_FILE = "MyLauncherTests/MyLauncherTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -522,8 +561,21 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyLauncherTests/MyLauncherTests-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				INFOPLIST_FILE = "MyLauncherTests/MyLauncherTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"$(SRCROOT)/libOCMock.a\"",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;

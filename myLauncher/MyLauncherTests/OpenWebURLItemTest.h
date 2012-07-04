@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface MyLauncherTests : SenTestCase
+@interface OpenWebURLItemTest : SenTestCase
 
 @end
