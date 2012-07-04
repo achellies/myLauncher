@@ -30,6 +30,10 @@
 		7DF382DA13326D0100738192 /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF382D913326D0100738192 /* Icon-iPad.png */; };
 		E30AA30615A491EA00B6078B /* OpenWebURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD6E815A32B0D005FC746 /* OpenWebURLItem.m */; };
 		E30AA30F15A4993100B6078B /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E30AA30715A4993100B6078B /* libOCMock.a */; };
+		E30AA31115A4AFC400B6078B /* Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF382D913326D0100738192 /* Icon-iPad.png */; };
+		E30AA31215A4AFC400B6078B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F975CCD122B524500F678EB /* Icon@2x.png */; };
+		E30AA31315A4AFC400B6078B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F975CCC122B524500F678EB /* Icon.png */; };
+		E30AA31615A4BB3300B6078B /* MyLauncherGenericItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E30AA31515A4BB3300B6078B /* MyLauncherGenericItemTest.m */; };
 		E30C172E1599E5EB0073DA67 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30C172D1599E5EB0073DA67 /* SenTestingKit.framework */; };
 		E30C172F1599E5EB0073DA67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		E30C17301599E5EB0073DA67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -87,6 +91,8 @@
 		E30AA30C15A4993100B6078B /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
 		E30AA30D15A4993100B6078B /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		E30AA30E15A4993100B6078B /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockRecorder.h; sourceTree = "<group>"; };
+		E30AA31415A4BB3300B6078B /* MyLauncherGenericItemTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherGenericItemTest.h; sourceTree = "<group>"; };
+		E30AA31515A4BB3300B6078B /* MyLauncherGenericItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLauncherGenericItemTest.m; sourceTree = "<group>"; };
 		E30C172C1599E5EB0073DA67 /* MyLauncherTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLauncherTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30C172D1599E5EB0073DA67 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E30C17331599E5EB0073DA67 /* MyLauncherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyLauncherTests-Info.plist"; sourceTree = "<group>"; };
@@ -274,6 +280,8 @@
 			children = (
 				E30C17371599E5EB0073DA67 /* OpenWebURLItemTest.h */,
 				E30C17381599E5EB0073DA67 /* OpenWebURLItemTest.m */,
+				E30AA31415A4BB3300B6078B /* MyLauncherGenericItemTest.h */,
+				E30AA31515A4BB3300B6078B /* MyLauncherGenericItemTest.m */,
 				E30C17321599E5EB0073DA67 /* Supporting Files */,
 			);
 			path = MyLauncherTests;
@@ -375,6 +383,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30AA31115A4AFC400B6078B /* Icon-iPad.png in Resources */,
+				E30AA31215A4AFC400B6078B /* Icon@2x.png in Resources */,
+				E30AA31315A4AFC400B6078B /* Icon.png in Resources */,
 				E30C17361599E5EB0073DA67 /* InfoPlist.strings in Resources */,
 				E30C1757159A33C20073DA67 /* Google-icon.png in Resources */,
 				E30C175A159A33C80073DA67 /* Google-icon-iPad.png in Resources */,
@@ -427,6 +438,7 @@
 			files = (
 				E30C17391599E5EB0073DA67 /* OpenWebURLItemTest.m in Sources */,
 				E30AA30615A491EA00B6078B /* OpenWebURLItem.m in Sources */,
+				E30AA31615A4BB3300B6078B /* MyLauncherGenericItemTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

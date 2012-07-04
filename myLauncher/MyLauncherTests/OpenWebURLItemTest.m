@@ -8,7 +8,7 @@
 
 #import "OpenWebURLItemTest.h"
 #import "OpenWebURLItem.h"
-#import "OCMockObject.h"
+#import <OCMock/OCMock.h>
 
 
 @interface OpenWebURLItemTest(){
@@ -23,7 +23,8 @@
 - (void)setUp
 {
     [super setUp];
-    icon = [UIImage imageNamed:@"Icon.png"];
+    NSString *path = [[NSBundle bundleForClass:[self class]]  pathForResource:@"Icon" ofType:@"png"];
+    icon = [UIImage imageWithContentsOfFile:path];
     webItem = [[OpenWebURLItem alloc] initWithURL:@"http://TestURL.org" andIcon:icon];
 }
 
@@ -36,35 +37,26 @@
 
 - (void)testEncoding
 {
-    NSCoder *coder;
-    
-    id mock = [OCMockObject partialMockForObject:coder];
-    
-    
-//    NSMutableData *data = [[NSMutableData alloc] init];
-//    coder = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [webItem encodeWithCoder:mock];
+    id mockCoder = [OCMockObject mockForClass:[NSCoder class]];
+    [[mockCoder expect] encodeObject:@"http://TestURL.org" forKey:@"URL"];
+    [[mockCoder expect] encodeObject:UIImagePNGRepresentation(icon) forKey:@"icon"];
+    [webItem encodeWithCoder:mockCoder];
      
-    
-//    NSCoder *decoder = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-//    NSString *url = [decoder decodeObjectForKey:@"URL"];
-//    STAssertEqualObjects(url, @"http://TestURL.org", @"The URL");
-     
-     //_icon = [UIImage imageWithData:[coder decodeObjectForKey:@"icon"]];
+    [mockCoder verify];
 }
-
 
 - (void)testDecoding
 {
+    id mockDecoder = [OCMockObject mockForClass:[NSCoder class]];
     
-    NSMutableData *data = [[NSMutableData alloc] init];
-    NSCoder *decoder = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-    OpenWebURLItem *decodedWebItem = [webItem initWithCoder:decoder];
+    [[[mockDecoder stub] andReturn:@"http://TestURL.org"] decodeObjectForKey:@"URL"];
+    [[[mockDecoder stub] andReturn:UIImagePNGRepresentation(icon)] decodeObjectForKey:@"icon"];
+    
+    OpenWebURLItem *decodedWebItem = [webItem initWithCoder:mockDecoder];
     
     STAssertEqualObjects([decodedWebItem url], @"http://TestURL.org", @"The URL");
-    
-    //_icon = [UIImage imageWithData:[coder decodeObjectForKey:@"icon"]];
-    
+    STAssertNotNil([decodedWebItem icon], @"The icon not nil");
+    STAssertEqualObjects([[decodedWebItem icon] class], [UIImage class], @"The icon not nil");
 }
 
 @end
