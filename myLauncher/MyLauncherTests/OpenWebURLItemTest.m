@@ -55,6 +55,7 @@
     OpenWebURLItem *decodedWebItem = [webItem initWithCoder:mockDecoder];
     
     STAssertEqualObjects([decodedWebItem url], @"http://TestURL.org", @"The URL");
+    
     STAssertNotNil([decodedWebItem icon], @"The icon not nil");
     STAssertEqualObjects([[decodedWebItem icon] class], [UIImage class], @"The icon not nil");
 }

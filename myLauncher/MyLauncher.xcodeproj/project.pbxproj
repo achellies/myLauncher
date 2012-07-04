@@ -48,6 +48,15 @@
 		E3A83CC7159E2F6C006CCA39 /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A83CC6159E2F6C006CCA39 /* MyLauncherItem.m */; };
 		E3CCD6A215A31E3E005FC746 /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD68415A31C92005FC746 /* MyLauncherGenericItem.m */; };
 		E3CCD6E915A32B0D005FC746 /* OpenWebURLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD6E815A32B0D005FC746 /* OpenWebURLItem.m */; };
+		E3D4A9F415A4C0F20001541B /* MyLauncherGenericItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CCD68415A31C92005FC746 /* MyLauncherGenericItem.m */; };
+		E3D4A9F715A4C1EC0001541B /* MyLauncherItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A83CC6159E2F6C006CCA39 /* MyLauncherItem.m */; };
+		E3D4A9F815A4C2270001541B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		E3D4A9F915A4C2360001541B /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0590E1397988B00E0EAA9 /* CustomBadge.m */; };
+		E3D4A9FA15A4C2390001541B /* MyLauncherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F975C98122B4FAE00F678EB /* MyLauncherViewController.m */; };
+		E3D4A9FB15A4C23B0001541B /* MyLauncherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F975C96122B4FAE00F678EB /* MyLauncherView.m */; };
+		E3D4A9FC15A4C23E0001541B /* MyLauncherViewControllerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F975C90122B4FAE00F678EB /* MyLauncherViewControllerItem.m */; };
+		E3D4A9FD15A4C2410001541B /* MyLauncherScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F975C94122B4FAE00F678EB /* MyLauncherScrollView.m */; };
+		E3D4A9FE15A4C2440001541B /* MyLauncherPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F975C92122B4FAE00F678EB /* MyLauncherPageControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +118,7 @@
 		E3CCD6C815A32447005FC746 /* MyLauncherGenericItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLauncherGenericItem.h; path = MyLauncher/MyLauncherGenericItem.h; sourceTree = "<group>"; };
 		E3CCD6E715A32B0D005FC746 /* OpenWebURLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWebURLItem.h; path = MyLauncher/OpenWebURLItem.h; sourceTree = "<group>"; };
 		E3CCD6E815A32B0D005FC746 /* OpenWebURLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWebURLItem.m; path = MyLauncher/OpenWebURLItem.m; sourceTree = "<group>"; };
+		E3D4A9F615A4C1760001541B /* MyLauncherGenericItemDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLauncherGenericItemDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D4A9F815A4C2270001541B /* CoreGraphics.framework in Frameworks */,
 				E30C172E1599E5EB0073DA67 /* SenTestingKit.framework in Frameworks */,
 				E30C172F1599E5EB0073DA67 /* UIKit.framework in Frameworks */,
 				E30C17301599E5EB0073DA67 /* Foundation.framework in Frameworks */,
@@ -191,6 +202,7 @@
 				0F975C94122B4FAE00F678EB /* MyLauncherScrollView.m */,
 				0F975C91122B4FAE00F678EB /* MyLauncherPageControl.h */,
 				0F975C92122B4FAE00F678EB /* MyLauncherPageControl.m */,
+				E3D4A9F615A4C1760001541B /* MyLauncherGenericItemDelegate.h */,
 			);
 			name = MyLauncher;
 			sourceTree = "<group>";
@@ -439,6 +451,14 @@
 				E30C17391599E5EB0073DA67 /* OpenWebURLItemTest.m in Sources */,
 				E30AA30615A491EA00B6078B /* OpenWebURLItem.m in Sources */,
 				E30AA31615A4BB3300B6078B /* MyLauncherGenericItemTest.m in Sources */,
+				E3D4A9F415A4C0F20001541B /* MyLauncherGenericItem.m in Sources */,
+				E3D4A9F715A4C1EC0001541B /* MyLauncherItem.m in Sources */,
+				E3D4A9F915A4C2360001541B /* CustomBadge.m in Sources */,
+				E3D4A9FA15A4C2390001541B /* MyLauncherViewController.m in Sources */,
+				E3D4A9FB15A4C23B0001541B /* MyLauncherView.m in Sources */,
+				E3D4A9FC15A4C23E0001541B /* MyLauncherViewControllerItem.m in Sources */,
+				E3D4A9FD15A4C2410001541B /* MyLauncherScrollView.m in Sources */,
+				E3D4A9FE15A4C2440001541B /* MyLauncherPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +563,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				INFOPLIST_FILE = "MyLauncherTests/MyLauncherTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -578,7 +598,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				INFOPLIST_FILE = "MyLauncherTests/MyLauncherTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

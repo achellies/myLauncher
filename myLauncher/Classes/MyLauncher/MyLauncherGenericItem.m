@@ -32,7 +32,6 @@
 }
 
 -(void)selected:(MyLauncherViewController*)parent {
-    
     [_genericDelegate start];
 }
 

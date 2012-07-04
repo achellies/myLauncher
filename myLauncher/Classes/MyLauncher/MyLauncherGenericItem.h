@@ -17,13 +17,7 @@
 //
 
 #import "MyLauncherItem.h"
-
-@protocol MyLauncherGenericItemDelegate <NSObject>
-
--(void)start;
--(UIImage*)icon;
-
-@end
+#import "MyLauncherGenericItemDelegate.h"
 
 @interface MyLauncherGenericItem : MyLauncherItem
 
