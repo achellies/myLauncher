@@ -30,6 +30,7 @@
 - (void)testSelected
 {
     id mockGenericDelegate = [OCMockObject mockForProtocol:@protocol(MyLauncherGenericItemDelegate)];
+    
     [(id<MyLauncherGenericItemDelegate>)[mockGenericDelegate expect] start];
     
     MyLauncherGenericItem *genericItem = [[MyLauncherGenericItem alloc] initWithTitle:@"My Title" delegate:mockGenericDelegate deletable:YES];
@@ -38,6 +39,21 @@
     [genericItem selected:mockParentController];
     
     [mockGenericDelegate verify];
+}
+
+-(void) testItemToSave
+{
+    id mockGenericDelegate = [OCMockObject mockForProtocol:@protocol(MyLauncherGenericItemDelegate)];
+    
+    MyLauncherGenericItem *genericItem = [[MyLauncherGenericItem alloc] initWithTitle:@"My Title" delegate:mockGenericDelegate deletable:YES];
+    
+    NSDictionary *itemsToSave = [genericItem itemToSave];
+    
+    NSData* savedData = [itemsToSave objectForKey:@"genericDelegate"];
+    
+    MyLauncherGenericItem *unarchived = [NSKeyedUnarchiver unarchiveObjectWithData:savedData];
+    STAssertEqualObjects(mockGenericDelegate, unarchived, @"");
+    
 }
 
 @end

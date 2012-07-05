@@ -41,7 +41,9 @@
 
 - (id)initWithCoder:(NSCoder*)coder {
     _url = [coder decodeObjectForKey:@"URL"];
-    _icon = [UIImage imageWithData:[coder decodeObjectForKey:@"icon"]];
+    UIImage *tmpicon = [UIImage imageWithData:[coder decodeObjectForKey:@"icon"]];
+    _icon = [UIImage imageWithCGImage:[tmpicon CGImage] scale:[coder decodeFloatForKey:@"scale"] orientation:UIImageOrientationUp];
+    
     return self;
 }
 
@@ -50,5 +52,7 @@
     
     NSData *data = UIImagePNGRepresentation(_icon);
     [coder encodeObject:data forKey:@"icon"];
+    
+    [coder encodeFloat:[_icon scale] forKey:@"scale"];
 }
 @end
