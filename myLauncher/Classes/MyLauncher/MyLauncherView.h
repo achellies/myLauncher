@@ -61,13 +61,12 @@
 -(void)setPages:(NSMutableArray *)pages numberOfImmovableItems:(NSInteger)items;
 -(void)setPages:(NSMutableArray *)pages numberOfImmovableItems:(NSInteger)items animated:(BOOL)animated;
 
--(void)layoutItems;
-
 -(void)viewDidAppear:(BOOL)animated;
 -(void)setCurrentOrientation:(UIInterfaceOrientation)newOrientation;
 -(void)layoutLauncher;
 -(void)layoutLauncherAnimated:(BOOL)animated;
 -(int)maxItemsPerPage;
 -(int)maxPages;
+-(void)saveChanges;
 
 @end

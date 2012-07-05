@@ -789,6 +789,9 @@ static const CGFloat iPadLandscapeYPadding = 30;
 }
 
 #pragma mark - myLauncher caching
+-(void)saveChanges {
+    [self savePages];
+}
 
 -(void)savePages
 {
