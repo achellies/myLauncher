@@ -29,7 +29,7 @@
 @synthesize iPadImage = _iPadImage;
 @synthesize controllerStr = _controllerStr;
 @synthesize controllerTitle = _controllerTitle;
-
+@synthesize deletable = _deletable;
 
 #pragma mark - Lifecycle
 

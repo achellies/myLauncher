@@ -30,7 +30,6 @@
 
 @interface MyLauncherItem : UIControl {	
 	BOOL _dragging;
-	BOOL _deletable;
     BOOL _titleBoundToBottom;
 }
 
@@ -38,6 +37,7 @@
 @property (nonatomic, unsafe_unretained) id delegate;
 @property (nonatomic, strong) CustomBadge *badge;
 @property (nonatomic, strong) UIButton *closeButton;
+@property (nonatomic) BOOL deletable;
 
 
 -(id)initWithTitle:(NSString*)title deletable:(BOOL)deletable;
