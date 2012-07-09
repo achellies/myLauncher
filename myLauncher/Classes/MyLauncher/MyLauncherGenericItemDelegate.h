@@ -12,5 +12,7 @@
 
 -(void)start;
 -(UIImage*)icon;
+-(int)itemId;
+-(int)version;
 
 @end
